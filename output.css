@@ -737,7 +737,7 @@ video {
 }
 
 .banner{
-  background: url('./asset/img/2.png') no-repeat;
+  background: url('../asset/img/2.png') no-repeat;
   background-size: cover;
   position:relative;
 }
