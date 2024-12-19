@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <template>
+        <div class="hello">
+          <div class="box" ref="box">盒子</div>
+          <div @click="handleFadeIn">淡入</div>
+          <div @click="handleFadeOut">淡出</div>
+        </div>
+      </template>
+
+    <script>
+        export default {
+            name: 'Fade',
+            data() {
+                return {};
+            },
+
+            created() {},
+
+            methods: {
+                handleFadeIn() {
+                    // this.$refs.box.className = 'box animated fadeIn'; // 这是3.x以下版本的使用方式
+                    this.$refs.box.className = 'box animate__animated animate__fadeIn'; // 这是4.0以上版本的使用方式
+                },
+                handleFadeOut() {
+                    // this.$refs.box.className = 'box animated fadeOut'; // 这是3.x以下版本的使用方式
+                    this.$refs.box.className = 'box animate__animated animate__fadeOut'; // 这是4.0以上版本的使用方式
+                },
+            },
+        };
+    </script>
+
+    <style lang="less" scoped>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+
+    作者：Boale_H 链接：https://juejin.cn/post/7023712306076844069 来源：稀土掘金 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</body>
+
+</html>
