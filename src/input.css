@@ -14,6 +14,8 @@
     background: url('./asset/img/2.png') no-repeat;
     background-size: cover;
     position:relative;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
 }
 .banner::before {
     content: '';
@@ -28,8 +30,32 @@
     z-index: 99;
     border: solid 2px white;
 }
-.banner .btn{
+.btn{
     border: solid 1px white;
     padding: 10px 16px;
     border-radius: 4px;
 }
+.text-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    z-index: 99;
+}
+
+.zoom-in-out-element {
+    animation: zoom-in-zoom-out 1s ease ;
+  }
+  
+  @keyframes zoom-in-zoom-out {
+    0% {
+      scale: 1000%;
+    }
+    100% {
+      scale: 100%;
+    }
+  }
+  .projectGallery img {
+    border-radius: 20px;
+  }
