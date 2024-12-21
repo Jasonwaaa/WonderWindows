@@ -4,7 +4,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tailwindcss -i ./src/input.css -o ./dist/output.css && xcopy .\\src\\asset\\img dist\\asset\\img\\ /E /I /Y",
+        "build": "tailwindcss -i ./src/input.css -o ./dist/output.css && xcopy .\\src\\* .\\dist\\ /E /I /Y",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist"
     },
