@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.Navigation{
+    z-index: 999;
+}
+.line{
+    width: 36px;
+    height: 2px;
+    color: white;
+    background-color: white;
+}
+.banner{
+    background: url('./asset/img/2.png') no-repeat;
+    background-size: cover;
+    position:relative;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* 调整最后的透明度数值来控制暗度 */
+}
+.banner .welcome{
+    z-index: 99;
+    border: solid 2px white;
+}
+.btn{
+    border: solid 1px white;
+    padding: 10px 16px;
+    border-radius: 4px;
+}
+.text-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    z-index: 99;
+}
+
+.zoom-in-out-element {
+    animation: zoom-in-zoom-out 1s ease ;
+  }
+  
+  @keyframes zoom-in-zoom-out {
+    0% {
+      scale: 1000%;
+    }
+    100% {
+      scale: 100%;
+    }
+  }
+  .projectGallery img {
+    border-radius: 20px;
+  }
