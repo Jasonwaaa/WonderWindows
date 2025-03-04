@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <section class="Navigation w-full bg-black bg-opacity-60 flex center font-mono text-white fixed top-0 ">
+        <nav class="w-10/12 h-16 mx-auto flex items-center">
+            <div class="w-12 h-12 items-start">
+                <a href="#"><img src="./asset/img/logo.jpg" alt=""></a>
+            </div>
+            <ul class="hidden md:flex items-center mx-3 mr-auto ">
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 duration-300"><a href="./index.html">Home</a></li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 duration-300"><a href="./About.html">About</a></li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 duration-300"><a href="./Products.html">Products</a></li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 duration-300"><a href="">project</a></li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 duration-300"><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-bar md:hidden bar mx-3 ml-auto cursor-pointer flex items-center  gap-1 ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+              </svg>
+        </div>
+
+        <div class="mobileMenu duration-300">
+            <ul class="bg-neutral-500 text-white baitems-center ml-auto fixed right-0 w-10/12  h-screen duration-300 text-xl hidden">
+                <li class="close-btn px-4 py-1 cursor-pointer hover:bg-neutral-400 text-right duration-300 text-2xl ">X</li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="">Home</a></li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="">About</a></li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="">Products</a></li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="">project</a></li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="">Contact</a></li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="">Service</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <main class="container mx-auto py-20">
+        <div id="product-detail" class="max-w-4xl mx-auto bg-white p-8 shadow-md rounded-lg">
+            <h1 id="product-title" class="text-3xl font-bold mb-4"></h1>
+            <img id="product-image" src="" alt="" class="w-full mb-4">
+            <p id="product-description" class="text-gray-600 text-lg"></p>
+        </div>
+    </main>
+
+    <footer id="footer" class="bg-stone-800 h-auto xl:h-275 text-gray-300">
+        <!-- Footer content here -->
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const title = urlParams.get('title');
+            const description = urlParams.get('description');
+            const image = urlParams.get('image');
+
+            document.getElementById('product-title').textContent = title;
+            document.getElementById('product-description').textContent = description;
+            document.getElementById('product-image').src = image;
+        });
+    </script>
+</body>
+</html>
