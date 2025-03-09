@@ -5,7 +5,10 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
-
+li{
+    width: 100%;
+    list-style: none;
+}
 .Navigation{
     z-index: 999;
 }
@@ -33,7 +36,28 @@
 }
 .banner .welcome{
     z-index: 99;
-    border: solid 2px white;
+}
+.banner2{
+    background: url('./asset/img/banner2.jpg') no-repeat;
+    background-size: cover;
+    position:relative;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+.banner3{
+    background: url('./asset/img/banner3.jpg') no-repeat;
+    background-size: cover;
+    position:relative;
+    transition: all 0.5s ease-in-out;
+    background-position: 0px 50%; 
+    overflow: hidden;
+}
+.banner4{
+    background: url('./asset/img/benner4.jpg') no-repeat;
+    background-size: cover;
+    position:relative;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
 }
 .btn{
     border: solid 1px white;
@@ -48,7 +72,29 @@
     height: 50vh;
     z-index: 99;
 }
+.email-link::before {
+    content: url('./asset/svg/mail_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.svg');
+    display: inline;
+   
+    margin-right: 8px; /* 根据需要调整图标与文本之间的间距 */
+    vertical-align: middle; /* 使图标与文本垂直对齐 */
+}
 
+.address-link::before {
+    content: url('./asset/svg/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg');
+    display: inline;
+   
+    margin-right: 8px; /* 根据需要调整图标与文本之间的间距 */
+    vertical-align: middle; /* 使图标与文本垂直对齐 */
+}
+
+.phone-link::before {
+    content: url('./asset/svg/call_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.svg');
+    display: inline;
+   
+    margin-right: 8px; /* 根据需要调整图标与文本之间的间距 */
+    vertical-align: middle; /* 使图标与文本垂直对齐 */
+}
 .zoom-in-out-element {
     animation: zoom-in-zoom-out 1s ease ;
   }
