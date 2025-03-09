@@ -115,6 +115,30 @@
     </footer>
 </body>
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
+      let hasPlayed = false;
+      (function() {
+          const menuBar = document.querySelector('.menu-bar');
+          const mobileMenu = document.querySelector('.mobileMenu');
+          const mobileMenuUl = document.querySelector('.mobileMenu ul')
+          const menuExit = document.querySelector('.mobileMenu ul .close-btn');
+
+
+          menuBar.addEventListener('click', () => {
+              mobileMenuUl.classList.remove('animate__animated', 'animate__slideOutRight');
+              mobileMenuUl.classList.add('animate__animated', 'animate__slideInRight');
+              mobileMenuUl.classList.toggle('hidden');
+          });
+          menuExit.addEventListener('click', () => {
+              mobileMenuUl.classList.remove('animate__animated', 'animate__slideInRight');
+              mobileMenuUl.classList.add('animate__animated', 'animate__slideOutRight');
+              // mobileMenuUl.classList.toggle('hidden');
+          });
+      })();
+
+  });
+  </script>
+<script>
      document.addEventListener('DOMContentLoaded', () => {
         const products=[
   {
@@ -286,6 +310,7 @@ product100.forEach(product => {
     productGrid100.appendChild(card);
 
 });
+
     });
 </script>
 </html>
