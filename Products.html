@@ -260,7 +260,7 @@ const productGrid = document.getElementById('product-grid50');
 const productGrid100 = document.getElementById('product-grid100');
 products.forEach(product => {
     const card = document.createElement('div');
-    card.className = 'bg-white p-4 shadow-md rounded-lg flex md:justify-center';
+    card.className = 'bg-white p-4 shadow-md rounded-lg flex flex-row-reverse md:justify-center';
     card.setAttribute('data-title', product.name);
     card.setAttribute('data-description', product.description);
     card.setAttribute('data-image', product.image); 
