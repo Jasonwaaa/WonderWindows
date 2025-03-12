@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <link href="./output.css" rel="stylesheet">
     </head>
-<body>
-    <section class="Navigation w-full bg-black flex center font-mono text-white fixed top-0 ">
+<body class="bg-stone-900">
+    <section class="Navigation w-full bg-black bg-opacity-60 flex center font-mono text-white fixed top-0 ">
         <nav class="w-10/12 h-16 mx-auto flex items-center">
             <div class="w-12 h-12 items-start">
                 <a href="#"><img src="./asset/img/logo.png" alt=""></a>
@@ -35,7 +35,7 @@
                 <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="./index.html">Home</a></li>
                 <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="./About.html">About</a></li>
                 <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="./Products.html">Products</a></li>
-                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="./Projects.html">project</a></li>
+                <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="./Projects.html">Project</a></li>
                 <li class="px-4 py-1 cursor-pointer hover:bg-neutral-400 text-center"><a href="./index.html#Contact">Contact</a></li>
             </ul>
         </div>
@@ -51,26 +51,32 @@
         </div>
     </section>
 
-    <main class=" bg-black text-xl py-8 ">
-        <section class="flex items-center justify-center bg-black bg-opacity-60 gap-6 ">
-            <img class='w-full lg:w-4/12 hidden md:block md:w-6/12' src="./asset/img/banner1.png" alt="Beautiful-Windows">
-            <div class="about lg:w-3/12 pl-4 ">
-                <p class="w-full text-justify py-8 text-gray-400 font-semibold">
-                    Wonder Windows is an excellent supplier of windows and doors, specializing in both residential and commercial applications. With over 30 years of experience, our team offers a comprehensive range of products, including timber-revealed residential windows, subhead and subsill commercial windows.
+    <main class=" text-xl py-8 ">
+        <section class="flex flex-col justify-center items-center gap-6 ">
+           
+            <div class="flex justify-center items-center md:w-10/12 lg:w-8/12 xl:w-6/12 gap-10 ">
+                <img class=' hidden md:block md:w-6/12' src="./asset/img/banner1.png" alt="Beautiful-Windows">
+                <p class="w-10/12 md:w-6/12 text-left py-8 text-gray-400 font-semibold">
+                    Windows is an excellent supplier of windows and doors, specializing in both residential and commercial applications. With many years of experience, our team offers a comprehensive range of products, including timber-revealed residential windows, subhead, and subsill commercial windows.
                 </p>
-                <p class="w-full text-justify py-8 text-gray-400 font-semibold">
+                
+            </div>
+
+            <div class="flex justify-center md:flex-row-reverse items-center md:w-10/12 lg:w-8/12 xl:w-6/12 gap-10 ">
+                <img class=' hidden md:block md:w-6/12' src="./asset/img/main.jpg" alt="Beautiful-Windows">
+                <p class="w-10/12  md:w-6/12 text-left py-8 text-gray-400 font-semibold te">
                     Our expertise covers the full scope of services from design and manufacturing to installation. We utilize the latest technology and high-quality materials to ensure that our windows are not only aesthetically pleasing but also durable and energy-efficient. We are committed to product quality and customer service, ensuring that our products meet the highest industry standards.
                 </p>
                 
             </div>
+
         </section>
 
-        <section class="flex items-center justify-center bg-black bg-opacity-60 gap-6">
-                <p class="w-full text-justify text-2xl md:text-center text-gray-400 font-semibold">
+        <section class="flex items-center justify-center gap-6 py-10">
+                <p class="w-10/12 text-left text-2xl md:text-center text-gray-400 font-semibold">
                     We firmly believe that customer satisfaction and product quality are the foundation of our success.
                 </p>
         </section>
-
     </main>
 
     <footer id="footer" class="bg-stone-800 h-auto xl:h-275 text-gray-300">
@@ -95,7 +101,7 @@
                     </ul>
                 </div>
             </div>
-
+            
             <!--FOOTER NAVIGATION LINK MENUS -->
             <div class="flex justify-start mx-auto lg:pt-10-">
                 <!-- MENU 1 -->
